@@ -10,6 +10,8 @@
 }
 .data-grid .data-row {
     background-color: #cda2b7;
+    /*background-color: var(--color-grid-bg);*/
+
     /*padding: var(--padding-cells);*/
     border-bottom: var(--border-normal)
 }
