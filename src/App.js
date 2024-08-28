@@ -21,6 +21,7 @@ export default function App({env, myPath, myRefresh, myMethod, myIariSourceId, m
     const [refreshCheck, setRefreshCheck] = useState(myRefresh);
     const [checkMethod, setCheckMethod] = useState(myMethod);
 
+    // eslint-disable-next-line no-unused-vars
     const [myError, setMyError] = useState(null);
 
     const [gridItems, setGridItems] = useState("")
