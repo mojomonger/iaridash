@@ -12,7 +12,8 @@ All scripts should be run from the project directory.
 ### `npm start`
 
 Runs IARE Dashboard in development mode.\
-Open [http://localhost:3300](http://localhost:3300) to run.
+Open [http://localhost:3300/grid](http://localhost:3300/grid) to run.
+
 
 * Changes in the source code automatically reloads page.
 * Lint errors found during compilation shown in the console.
@@ -30,6 +31,6 @@ Whenever a new commit is uploaded to the iaridash repo, a GitHub Action is autom
 creates a production ready version of app, and made available at the address:
 
 ```
-https://mojomonger.github.io/iaredash/
+https://mojomonger.github.io/iaridash/
 ```
 
