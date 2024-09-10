@@ -1,4 +1,4 @@
-name: Iaridash Staging Deployment
+name: Staging Deployment
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 20
 
-        name: Install dependencies and build artifacts
+      - name: Install dependencies and build artifacts
         run: |
           npm install
           npm run build
@@ -27,6 +27,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: build/
+
   deploy:
     needs: build
     permissions:
