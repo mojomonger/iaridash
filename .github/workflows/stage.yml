@@ -1,4 +1,4 @@
-name: Staging Deployment
+name: Iaridash Staging Deployment
 
 on:
   workflow_dispatch:
@@ -11,13 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Install dependencies and build artifacts
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+        name: Install dependencies and build artifacts
         run: |
           npm install
           npm run build
+
       - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: build/
   deploy:
@@ -32,4 +39,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
